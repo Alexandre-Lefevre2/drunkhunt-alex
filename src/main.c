@@ -8,6 +8,8 @@ int main(void)
     sfVideoMode mode = {1920, 1080, 32};
     sfRenderWindow* window;
     sfTexture* texture;
+    sfSprite* sprite;
+    sfEvent event;
 
     window = sfRenderWindow_create(mode, "CSFML window", sfResize | sfClose, NULL);
     if (!window)
@@ -17,8 +19,15 @@ int main(void)
     if (!texture)
         return 84;
 
+    sprite = sfSprite_create();
+    sfSprite_setTexture(sprite, texture, sfTrue);
+
     while (sfRenderWindow_isOpen(window)) {
-        if (drunkhunt(window, texture) == 84)
+        if (drunkhunt(window, texture, sprite, event) == 84)
             return 84;
     }
+
+    sfSprite_destroy(sprite);
+    sfTexture_destroy(texture);
+    sfRenderWindow_destroy(window);
 }

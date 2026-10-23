@@ -5,6 +5,6 @@
 #ifndef MY_H_
     #define MY_H_
 
-int drunkhunt(sfRenderWindow* window, sfTexture* texture);
+int drunkhunt(sfRenderWindow* window, sfTexture* texture, sfSprite* sprite, sfEvent event);
 
 #endif

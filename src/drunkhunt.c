@@ -3,14 +3,8 @@
 #include <SFML/Window.h>
 #include "../include/my.h"
 
-int drunkhunt(sfRenderWindow* window, sfTexture* texture)
+int drunkhunt(sfRenderWindow* window, sfTexture* texture, sfSprite* sprite, sfEvent event)
 {
-    sfSprite* sprite;
-    sfEvent event;
-
-    sprite = sfSprite_create();
-    sfSprite_setTexture(sprite, texture, sfTrue);
-
     while (sfRenderWindow_pollEvent(window, &event))
     {
         if (event.type == sfEvtClosed)
