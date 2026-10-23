@@ -9,8 +9,6 @@ CFLAGS = -g3 -Wall -Wextra -Wconversion -Wno-unused-parameter -lcsfml-system -lc
 
 NAME	=	drunkhunt
 
-# INCLUDE	=	-Iinclude/
-
 all:	$(NAME)
 
 $(NAME): $(OBJ) $(OBJ_FLAG)
