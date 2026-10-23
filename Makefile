@@ -1,7 +1,8 @@
 ## Makefile
 ## Drunkhunt
 
-SRC	=	src/main.c		
+SRC	=	src/main.c	\
+		src/drunkhunt.c
 
 OBJ	=	$(SRC:.c=.o)
 
